@@ -3,8 +3,13 @@ const express = require('express');
 const app = express();
 const port = 3000;
 var router = require('./routes.js')
+var productRoutes = require('./product-routes.js')
 
+/* Routes.js should only run */
 app.use('/', router);
+
+/* This should only run when you seach for the products */ 
+app.use('/products', productRoutes);
 
 /* Here is listen for the port and if the port is open, it will show in your Terminal */
 app.listen(port, () => {
