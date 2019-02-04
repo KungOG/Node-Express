@@ -35,10 +35,9 @@ app.get("/products", (req, res) => {
     res.send("This is info on the product: " + req.query.category);
 });
  
-/* Just an example on how About shows localhost:3000/about */ 
+/* Just an example on how a HTML-file (About) shows localhost:3000/about */ 
 app.get("/about", (req, res) => {
     res.sendFile(__dirname + "/about.html");
-    res.send('About')
 });
 
 /* If you go to a non-based site, Error 404 will show localhost:3000* */
