@@ -8,8 +8,10 @@ const fs = require('fs');
 var router = require('./routes.js')
 var productRoutes = require('./product.js')
 
-/* How to access a styles */
-app.use(express.static(__dirname + '/public'));
+/* How to access a styles... */
+app.use(express.static('public'));
+/* and pictures */
+app.use(express.static('images'));
 
 var logVisits = function(req, res, next) {
     let input = new Date() + ' ' + req.path + '\n';

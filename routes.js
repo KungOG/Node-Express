@@ -2,8 +2,9 @@
 const express = require('express');
 var router = express.Router();
 
+/* Accessing image and HTML-file (index.html)*/
 router.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.sendFile(__dirname + '/index.html');
 });
 
 /* Here we access a (about.html) HTML-file */ 
