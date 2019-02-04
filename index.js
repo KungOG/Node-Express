@@ -2,8 +2,13 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+
+/* The different modules */ 
 var router = require('./routes.js')
-var productRoutes = require('./product-routes.js')
+var productRoutes = require('./product.js')
+
+/* How to access a styles */
+app.use(express.static(__dirname + '/public'));
 
 /* Routes.js should only run */
 app.use('/', router);
