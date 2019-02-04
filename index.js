@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const fs = require('fs');
 
 /* The different modules */ 
 var router = require('./routes.js')
@@ -9,6 +10,16 @@ var productRoutes = require('./product.js')
 
 /* How to access a styles */
 app.use(express.static(__dirname + '/public'));
+
+var logVisits = function(req, res, next) {
+    let input = new Date() + ' ' + req.path + '\n';
+    fs.appendFile('accessLog', input, (err) => {
+        if (err) throw err;
+    });
+    next();
+}
+
+app.use(logVisits);
 
 /* Routes.js should only run */
 app.use('/', router);
