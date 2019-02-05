@@ -1,0 +1,22 @@
+[
+    {
+    "bookId":  1,
+    "title":    "The Hobbit",
+    "author":   "J. R. R. Tolkien"
+    },
+    {
+    "bookId":  2,
+    "title":    "Lord of the Rings: The Fellowship of the Ring",
+    "author":   "J. R. R. Tolkien"
+    },
+    {
+    "bookId":  3,
+    "title":    "Lord of the Rings: The Two Towers",
+    "author":   "J. R. R. Tolkien"
+    },
+    {
+    "bookId":  4,
+    "title":    "Lord of the Rings: The Return of the King",
+    "author":   "J. R. R. Tolkien"
+    }
+]
